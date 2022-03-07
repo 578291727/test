@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.springboottest.test.dao.MyMapper" >
+
+    <select id="selectUserByName" parameterType="java.lang.String"  resultType="com.springboottest.test.been.informayion">
+        SELECT * FROM test WHERE name = #{name}
+    </select>
+    <insert id="inser" parameterType="com.springboottest.test.been.informayion" >
+
+      INSERT test(age,name) VALUES(#{age},#{name})
+    </insert>
+
+</mapper>
